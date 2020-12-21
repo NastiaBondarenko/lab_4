@@ -700,3 +700,6 @@ window.addEventListener('popstate', router);
 
 
 
+window.onunload = function() {
+	localStorage.clear();
+}
