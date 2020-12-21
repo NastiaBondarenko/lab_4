@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lab_4</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	
+		<div class="inform">
+			<div class="phone">
+				<img class="icon" src="picture/phone.png">
+				<h2>044 222 11 11</h2>
+			</div>
+			<div class="location">
+				<img class="icon" src="picture/location.png">
+				<h4>Київ</h4>
+			</div>
+			<div class="informButtons">
+			
+					<button class="informButton language" onclick="language()" >
+						<h3>Укр</h3>
+						<img class="arrowIcons" id="arrowIcons" src="picture/arrow.png">
+					</button>	
+				<button class="informButton exit">
+					<h3>Увійти</h3>
+				</button>
+			</div>
+
+		</div>
+
+		<div class="menu">
+			<div class="logo">
+				<img  class="logoImg" src="picture/logo.png">
+				<h2>Domino's Pizza</h2>
+			</div>
+			<div class="eatMenu">
+				<div class="punktOfEatMenu"><strong>Акції</strong></div>
+				<div class="punktOfEatMenu">Піцца</div>
+				<div class="punktOfEatMenu">Напої</div>
+				<div class="punktOfEatMenu">Сайди</div>
+				<div class="punktOfEatMenu">Десерти</div>
+			</div>
+			<div class="basket">
+				<div class="imgBasket">
+					<p id ="counter">00</p>
+					<img class="iconBasket" src="picture/basket1.png">
+
+				</div>
+				<p hidden id="basketPay">00.00грн</p>
+				<button class="order"><h3>Замовити</h3></button>
+			</div>
+			<img class="iconMenu" src="picture/menu.png">
+		</div>
+	
+	<div class="languages" id="languages">
+			<h3>Укр</h3>
+			<div class="line"></div>
+			<h3>Рус</h3>
+			<div class="line"></div>
+			<h3>Анг</h3>				
+						</div>
+	<div class="mainBlock"> 
+	<div class="baskBlock">
+		<div class="delivery">
+			<h2>Оформлення замовлення</h2>
+			<div class="deliveryButtons">
+				<button class="deliveryButton deliveryButton1" id="deliveryB1" onclick="delivery()">Доставка</button>
+				<button class="deliveryButton deliveryButton2" id="deliveryB2" onclick="selfPickup()">З собою</button>
+			</div>
+			<div class="formBask" id="formBask1" >
+				<h2>Контакти</h2>
+				<form class="contactInput" id="form1">
+					<input type="text" name="name" class="inputBask wid3" placeholder="Ім'я">
+					<input type="text" name="number" class="inputBask wid3" placeholder="Email">
+					<input type="text" name="email" class="inputBask wid3" placeholder="Телефон">
+				</form>
+				<h2>Адреса</h2>
+				<form class="adressInput" id="form2">
+					<input type="text" name="town" class="inputBask wid3" placeholder="Місто">
+					<input type="text" name="street" class="inputBask wid2" placeholder="Вулиця">
+					<input type="text" name="house" class="inputBask wid3" placeholder="Будинок">
+					<input type="text" name="flat" class="inputBask wid3" placeholder="Квартира">
+					<input type="text" name="pidizd" class="inputBask wid3" placeholder="Під'їзд">
+					<input type="text" name="cod" class="inputBask wid3" placeholder="Код">
+					<input type="text" name="poverh" class="inputBask wid3" placeholder="Поверх">
+					<input type="text" name="coment" class="inputBask wid2 com2" placeholder="Коментар">
+				</form>
+				<h2>Дата та час</h2>
+				<div class="dataInput">
+					<form class="forInp" id="form3">
+						Дата
+					<input type="text" name="day" class="inputBask wid1" placeholder="Сьогодні">
+					</form>
+					<form class="forInp" id="form4">
+						Час
+					<input type="text" name="time" class="inputBask wid1" placeholder="Найближчим">
+					</form>
+				</div>
+				<h2>Оплата</h2>
+				<form class="payInput" id="form5">
+					<input type="text" name="action" class="inputBask wid3" placeholder="Купон">
+					<input type="text" name="reshta" class="inputBask wid3" placeholder="Решта з">
+					<input type="text" name="typePay" class="inputBask wid3" placeholder="Тип оплати">
+				</form>
+				<h2>Усього</h2>
+				<h1>00.00 грн</h1>
+				<button onclick ="order(1)" class="makePrder">Замовити</button>
+			</div>
+			<div class="formBask" id="formBask2" hidden="" >
+				<h2>Контакти</h2>
+				<form class="contactInput" id="form6">
+					<input type="text" name="name1" class="inputBask wid3" placeholder="Ім'я">
+					<input type="text" name="email1" class="inputBask wid3" placeholder="Email">
+					<input type="text" name="number1" class="inputBask wid3" placeholder="Телефон">
+				</form>
+				<h2>Ресторан</h2>
+				<form class="adressInput" id="adressInput2">
+					<input type="text" name="town1" class="inputBask wid3" placeholder="Місто">
+					<input type="text" name="restor1" class="inputBask wid2" placeholder="Ресторан">
+					<input type="text" name="coment1" class="inputBask wid2 com2" id="com22" placeholder="Коментар">
+				</form>
+				<h2>Дата та час</h2>
+				<div class="dataInput">
+					<form class="forInp" id ="form8">
+						Дата
+					<input type="text" name="day1" class="inputBask wid1" placeholder="Сьогодні">
+					</form>
+					<form class="forInp" id="form9">
+						Час
+					<input type="text" name="time1" class="inputBask wid1" placeholder="Найближчим">
+					</form>
+				</div>
+				<h2>Оплата</h2>
+				<form class="payInput" id="form10">
+					<input type="text" name="action1" class="inputBask wid3" placeholder="Купон">
+					<input type="text" name="reshta1" class="inputBask wid3" placeholder="Решта з">
+					<input type="text" name="typePay1" class="inputBask wid3" placeholder="Тип оплати">
+				</form>
+				<h2>Усього</h2>
+				<h1>00.00 грн</h1>
+				<button onclick ="order(0)" class="makePrder">Замовити</button>
+			</div>
+		</div>
+		<div class="orderBask">
+			<h2>Ваше замовлення</h2>
+			<div class="mainBlockOrder">
+				<div class="productInOrder">
+					<img src="picture/pizza1.jpg" class="pictureproductInOrder">
+					<div class="mainPartOrederForm">
+						<div class="textBlockInOrder">
+							<h1>Піца Маргарита</h1>
+							<img src="picture/x2.png">
+						</div>
+						<div class="ingredInOrder">	
+								<p>Моцарела Соус Domino's</p>
+								<p>Середня Стандарт</p>
+						</div>
+						<div class="priseAndNumber">
+							<div><strong>97,45грн</strong></div>
+							<div class="numberOrder">
+								<button>+</button>
+								<p>1</p>
+								<button>-</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			<div class="greyline"></div>	
+				<div class="productInOrder">
+					<img src="picture/pizza1.jpg" class="pictureproductInOrder">
+					<div class="mainPartOrederForm">
+						<div class="textBlockInOrder">
+							<h1>Піца Маргарита</h1>
+							<img src="picture/x2.png">
+						</div>
+						<div class="ingredInOrder">	
+								<p>Моцарела Соус Domino's</p>
+								<p>Середня Стандарт</p>
+						</div>
+						<div class="priseAndNumber">
+							<div><strong>97,45грн</strong></div>
+							<div class="numberOrder">
+								<button>+</button>
+								<p>1</p>
+								<button>-</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="productInOrder">
+					<img src="picture/pizza1.jpg" class="pictureproductInOrder">
+					<div class="mainPartOrederForm">
+						<div class="textBlockInOrder">
+							<h1>Піца Маргарита</h1>
+							<img src="picture/x2.png">
+						</div>
+						<div class="ingredInOrder">	
+								<p>Моцарела Соус Domino's</p>
+								<p>Середня Стандарт</p>
+						</div>
+						<div class="priseAndNumber">
+							<div><strong>97,45грн</strong></div>
+							<div class="numberOrder">
+								<button>+</button>
+								<p>1</p>
+								<button>-</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+				<div class="priseOrder"><strong>00.00 грн</strong></div>
+
+		</div>
+	</div>
+</div>
+	<div class="footer">
+		<div>
+			<p><h3>DOMINO'S PIZZA</h3></p>
+			<p>Меню</p>
+			<p>Піцерії</p>
+			<p>Франчайзинг</p>
+			<p>Інформація за змістом алергенів і харчова цінність</p>
+			<p></p>
+			<p class="button">сайт розроблений @aasinka</p>
+		</div>
+		<div>
+			<p><h3>СЕРВІСИ</h3></p>
+			
+			<div>
+				<img src="picture/message.png">
+				Pizza Tracker
+			</div>
+			<div class="button">
+				ЗАГРУЗИТЬ ПРИЛОЖЕНИЕ
+				<div>
+					<img class="dowlands" src="picture/dowloand.png">
+				</div>
+			</div>
+		</div>
+		<div>
+			<p><h3>КОНТАКТИ</h3></p>
+			<p>info@dominos.ua</p>
+			<p>Залишити відгук</p>
+			<p>044 222 11 11</p>
+			<div class="button visa">
+				ПІДТРИМКА ПЛАТЕЖІВ
+				<img src="picture/visa.png">
+			</div>
+		</div>
+		<div>
+			<div class="logoButtum">
+				<img  class="logoImg" src="picture/logo.png">
+				<h2>Domino's Pizza</h2>
+			</div>
+			© 2020 Domino's Pizza Україна
+			
+
+			<div class="button">
+				СЛІДКУВАТИ
+				<div class="follow">
+					<img src="picture/facebook.png">
+					<img src="picture/instagram.png">
+					<img src="picture/telegram.png">
+					<img src="picture/twitter.png">
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<script src="index2.js"></script>
+</body>
+</html>
